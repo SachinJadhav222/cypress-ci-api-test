@@ -7,7 +7,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run:record": "cypress run --record",
+    "cy:run:record": "cypress run --record --key e7a3bbdc-1d3a-4ffc-aa18-52bdad68e1c6",
     "start": "json-server db.json",
     "test": "run-p --race start cy:run",
     "test:ci": "run-p --race start cy:run:record"
