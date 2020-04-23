@@ -1,5 +1,4 @@
 version: 2
-
 jobs:
   build:
     docker:
@@ -24,12 +23,8 @@ jobs:
             - ~/.cache
             - run: npm run cy:verify
   test-cy:
-   docker:
-      # the Docker image with Cypress dependencies
+    docker:
       - image: cypress/base:8
-        environment:
-          ## this enables colors in the output
-          TERM: xterm
     steps:
       - checkout
       - run: npm run test:ci
