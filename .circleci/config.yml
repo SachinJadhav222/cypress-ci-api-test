@@ -1,6 +1,7 @@
 version: 2
+
 jobs:
-  build:
+  test:
     docker:
       # the Docker image with Cypress dependencies
       - image: cypress/base:8
@@ -21,18 +22,10 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-            - run: npm run cy:verify
-  test-cy:
-    docker:
-      - image: cypress/base:8
-    steps:
-      - checkout
       - run: npm run test:ci
+
 workflows:
   version: 2
   tests:
     jobs:
-      - build
-      - test-cy:
-          requires:
-            - build
+      - test
