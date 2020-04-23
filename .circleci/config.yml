@@ -24,6 +24,8 @@ jobs:
             - ~/.cache
             - run: npm run cy:verify
   test-cy:
+   executor:
+       name: node/default
     steps:
       - checkout
       - run: npm run test:ci
