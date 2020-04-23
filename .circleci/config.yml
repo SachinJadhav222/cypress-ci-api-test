@@ -33,5 +33,5 @@ workflows:
     jobs:
       - build
       - test-cy:
-          require:
+          requires:
             - build
