@@ -22,7 +22,7 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-           - run: npm run cy:verify
+            - run: npm run cy:verify
   test-cy:
     steps:
       - checkout
