@@ -10,7 +10,9 @@
     "cy:record": "cypress run --record --key af8017de-d651-4f29-b510-944e0c1cbcd1",
     "start": "json-server db.json",
     "test": "run-p --race start cy:run",
-    "test:ci": "run-p --race start cy:record"
+    "test:ci": "run-p --race start cy:record",
+    "cy:verify": "cypress verify"
+
   },
   "keywords": [],
   "author": "sj",
